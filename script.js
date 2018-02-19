@@ -4,20 +4,14 @@ $(document).ready(function(){
     };
     function current(){
         navigator.geolocation.getCurrentPosition(function(position) {
-            //console.log(position.coords.latitude, position.coords.longitude);
-            
              currentLocation.lat = position.coords.latitude;
              currentLocation.long = position.coords.longitude;
-            //console.log(currentLocation.lat, currentLocation.long);
             location();
         });
 
     }
    
     function location(){
-                //console.log(cuurentLocation);
-        //console.log(currentLocation.lat, currentLocation.long);
-                
         $.getJSON("https://fcc-weather-api.glitch.me/api/current?lat="+currentLocation.lat + "&lon="+ currentLocation.long, function(data){
                 //console.log(data);
             $("#main").text(data.weather[0].main);
@@ -73,6 +67,7 @@ $("div p a").on("click", function(){
 });
 $("button").on("click", function(){
     var query = $("input").val();
+    $("div p a").text("C");
     $.getJSON("https://maps.googleapis.com/maps/api/geocode/json?address="+ query + "&key=AIzaSyD7y5QhpzNBztGl_UQxfF_TM68cNqLE00k", function(add){
         console.log(add);
         console.log(add.results[0].geometry.location);

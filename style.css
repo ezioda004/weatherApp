@@ -1,26 +1,6 @@
 * {
     box-sizing: border-box;
   }
-  /* html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-size: 18px;
-    font-family: Arial, sans-serif;
-  }
-  body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100%;
-    margin: 0;
-    padding: 0;
-    color: #8f90a3;
-    background-color: #232435;
-    background-image: linear-gradient(45deg, #232435, #35415f);
-    background-attachment: fixed;
-  } */
   h2 {
     margin-bottom: 4rem;
     font-size: 1rem;
@@ -308,4 +288,21 @@ a:hover{
 }
 #x {
     display: inline-block;
+}
+ div.form-group {
+  flex: 0 1 18%;
+  margin-bottom: 0;
+  margin-right: 10px;
+}
+
+/*
+button.btn {
+  position: relative;
+  top: -50px;
+  left: 230px;
+} */
+div.search {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
